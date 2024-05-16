@@ -1,0 +1,94 @@
+<title>
+    Apple
+</title>
+<style>
+    body{
+        background: linear-gradient(135deg, rgb(94, 252, 232) 10%, rgb(115, 110, 254) 100%);
+    }
+    input{
+        height: 40px;
+        width: 300px;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+        
+    }
+    button{
+        width: 90px;
+        height: 40px;
+        border-radius: 30px;
+        margin-top: 30px;
+        border: none;
+        background: #833ab4;
+  background: linear-gradient(
+    to right,
+    #833ab4,#fd1d1d,#fcb045
+  );
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        
+    }
+    .div1{
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        position: absolute;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -100%);
+    }
+    div{
+        text-align: start;
+    }
+    p{
+        font-weight: bold;
+        font-size: large;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<script>
+    var userList = [];
+    var pwdList = [];
+
+    function functionality(){
+        var uid = document.querySelector(".U_ID");
+        var pwd = document.querySelector('.pwd');
+        var uid_value = uid.value;
+        var pwd_value = pwd.value;
+        console.log(uid_value);
+        console.log(pwd_value);
+        if(uid_value == '')
+        {
+            alert('Please Enter User ID');
+        }
+        else if(pwd_value == '')
+        {
+            alert('Please Enter Password');
+        }
+        else{
+            alert('Successfully logged in!');
+            userList.push(uid_value);
+            pwdList.push(pwd_value);
+        }
+    }
+
+    
+</script>
+<body>
+    <div class="div1">
+        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">LOGIN</h2>
+        <div>
+            <p>
+                Username:
+            </p>
+            <input type="text" placeholder="Enter Your User ID"  class="U_ID">
+        </div>
+        
+        <div>
+            <p>Password:</p>
+        <input type="password" placeholder="Enter Your Password"  class="pwd">
+        </div>
+        
+        <button onclick="functionality();">Submit</button>
+    </div>
+</body>
